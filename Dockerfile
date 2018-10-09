@@ -1,12 +1,12 @@
-FROM alpine:3.7
+FROM alpine:3.8
 
 MAINTAINER Viktor Farcic <viktor@farcic.com>
 
 LABEL org.label-schema.vcs-ref=$VCS_REF \
-      org.label-schema.vcs-url="https://github.com/vfarcic/kubectl" \
-      org.label-schema.docker.dockerfile="/Dockerfile"
+    org.label-schema.vcs-url="https://github.com/vfarcic/kubectl" \
+    org.label-schema.docker.dockerfile="/Dockerfile"
 
-ENV HELM_LATEST_VERSION v2.9.1
+ENV HELM_LATEST_VERSION v2.11.0
 ENV KUBE_LATEST_VERSION v1.10.0
 
 RUN apk add -U ca-certificates git curl && \
